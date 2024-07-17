@@ -116,7 +116,6 @@ namespace IluminaRJApi.Controllers
             }
 
             _mapper.Map(municipioUpdate, municipio);
-            _context.Municipios.Add(municipio);
             _context.SaveChanges();
 
             return NoContent();
