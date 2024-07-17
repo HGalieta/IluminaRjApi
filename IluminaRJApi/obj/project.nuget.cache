@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KHoSQW/IrdHTTcL0shk+ZzVbfTcVoPxr8vf6teKxIX8wF+vF0GmBpkdcflk9CNanX++qPfHIEqOls2SZPsMOFQ==",
+  "dgSpecHash": "q4d9lNUDsQqbyJ+O6VwuQ2HEe9L48Zdq+GP6XebCqX7Rblz2+SyZhcCLMXlJO8waNkFmws79lbhk2+Jc0/t+UA==",
   "success": true,
   "projectFilePath": "C:\\Users\\hgali\\source\\repos\\IluminaRJApi\\IluminaRJApi\\IluminaRJApi.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,8 @@
     "C:\\Users\\hgali\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\hgali\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\hgali\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\hgali\\.nuget\\packages\\mysqlconnector\\2.1.2\\mysqlconnector.2.1.2.nupkg.sha512",
+    "C:\\Users\\hgali\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\6.0.2\\pomelo.entityframeworkcore.mysql.6.0.2.nupkg.sha512",
     "C:\\Users\\hgali\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\hgali\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\hgali\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
