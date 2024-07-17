@@ -68,5 +68,31 @@ namespace IluminaRJApi.Controllers
             return NoContent();
 
         }
+
+        [HttpPatch("{id}")]
+        public IActionResult PatchMunicipio(int id, JsonPatchDocument<UpdateMunicipioDto> patch )
+        {
+            var municipio = _context.Municipios
+                .FirstOrDefault(m => m.Id == id);
+
+            if (municipio == null)
+                return NotFound();
+
+            var municipioUpdate = _mapper.Map<UpdateMunicipioDto>(municipio);
+
+            patch.ApplyTo(municipioUpdate, ModelState);
+
+            if(!TryValidateModel(municipioUpdate))
+            {
+                return ValidationProblem(ModelState);
+            }
+
+            _mapper.Map(municipioUpdate, municipio);
+            _context.Municipios.Add(municipio);
+            _context.SaveChanges();
+
+            return NoContent();
+
+        }
     }
 }
