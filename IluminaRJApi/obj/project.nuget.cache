@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "q4d9lNUDsQqbyJ+O6VwuQ2HEe9L48Zdq+GP6XebCqX7Rblz2+SyZhcCLMXlJO8waNkFmws79lbhk2+Jc0/t+UA==",
+  "dgSpecHash": "Ee4YmVbCCD6dxG/y7qSOm9VqZne3MnEXRhYaDCFmYXPRZMkZp0lHEeta8k1ScOmkzVknfRpdSDR7VdIUuYoDBA==",
   "success": true,
   "projectFilePath": "C:\\Users\\hgali\\source\\repos\\IluminaRJApi\\IluminaRJApi\\IluminaRJApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\hgali\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\hgali\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\hgali\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\hgali\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\hgali\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
     "C:\\Users\\hgali\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.10\\microsoft.entityframeworkcore.abstractions.6.0.10.nupkg.sha512",
     "C:\\Users\\hgali\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.10\\microsoft.entityframeworkcore.analyzers.6.0.10.nupkg.sha512",
