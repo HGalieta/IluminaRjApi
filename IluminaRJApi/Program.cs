@@ -8,7 +8,9 @@ var connectionString = builder.Configuration.GetConnectionString("IluminaRjApiCo
 builder.Services.AddDbContext<DbContext>(opts =>
     opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
-builder.Services.AddControllers();
+builder.Services.AddAutoMapper(AppDomain
+    .CurrentDomain.GetAssemblies());
+builder.Services.AddControllers();.AddNewtonsoftJson();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
