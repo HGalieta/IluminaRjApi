@@ -45,3 +45,5 @@ C:\Users\hgali\source\repos\IluminaRJApi\IluminaRJApi\obj\Debug\net6.0\refint\Il
 C:\Users\hgali\source\repos\IluminaRJApi\IluminaRJApi\obj\Debug\net6.0\IluminaRJApi.pdb
 C:\Users\hgali\source\repos\IluminaRJApi\IluminaRJApi\obj\Debug\net6.0\IluminaRJApi.genruntimeconfig.cache
 C:\Users\hgali\source\repos\IluminaRJApi\IluminaRJApi\obj\Debug\net6.0\ref\IluminaRJApi.dll
+C:\Users\hgali\source\repos\IluminaRJApi\IluminaRJApi\bin\Debug\net6.0\IluminaRJApi.xml
+C:\Users\hgali\source\repos\IluminaRJApi\IluminaRJApi\obj\Debug\net6.0\IluminaRJApi.xml

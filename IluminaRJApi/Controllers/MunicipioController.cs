@@ -20,7 +20,14 @@ namespace IluminaRJApi.Controllers
             _mapper = mapper;
         }
 
+        /// <summary>
+        /// Insere um município ao banco de dados
+        /// </summary>
+        /// <param name="municipioDto">Objeto com os campos necessários para a criação de um município</param>
+        /// <returns>IActionResult</returns>
+        /// <response code="201">Caso a inserção seja feita com sucesso</response>
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         public IActionResult PostMunicipio(CreateMunicipioDto municipioDto)
         {
             Municipio municipio = _mapper.Map<Municipio>(municipioDto);
@@ -33,12 +40,23 @@ namespace IluminaRJApi.Controllers
                 municipio);
         }
 
+        /// <summary>
+        /// Retorna todos os municípios cadastrados no banco de dados
+        /// </summary>
+        /// <returns>IEnumerable</returns>
+        /// <response code="200" >Com a listagem de todos os municipios inseridos no banco de dados</response>
         [HttpGet]
         public IEnumerable<ReadMunicipioDto> GetMunicipios()
         {
             return _mapper.Map<List<ReadMunicipioDto>>(_context.Municipios);
         }
 
+        /// <summary>
+        /// Retorna o município se este constar no banco de dados
+        /// </summary>
+        /// <returns>IEnumerable</returns>
+        /// <response code="404">Caso o município com o id informado não exista no banco de dados</response>
+        /// <response code="200" >Com o municipio que possui id correspondente no banco de dados</response>
         [HttpGet("{id}")]
         public IActionResult GetMunicipioById(int id)
         {
@@ -52,6 +70,12 @@ namespace IluminaRJApi.Controllers
             return Ok(municipioDto);
         }
 
+        /// <summary>
+        /// Atualiza todos os dados do municipio se este constar no banco de dados
+        /// </summary>
+        /// <returns>IEnumerable</returns>
+        /// <response code="404">Caso o município com o id informado não exista no banco de dados</response>
+        /// <response code="204" >Caso o municipio seja encontrado e os dados sejam atualizados no banco de dados</response>
         [HttpPut("{id}")]
         public IActionResult PutMunicipio(int id, UpdateMunicipioDto municipioDto)
         {
@@ -69,6 +93,12 @@ namespace IluminaRJApi.Controllers
 
         }
 
+        /// <summary>
+        /// Atualiza o dado informado do municipio se este constar no banco de dados
+        /// </summary>
+        /// <returns>IEnumerable</returns>
+        /// <response code="404">Caso o município com o id informado não exista no banco de dados</response>
+        /// <response code="204" >Caso o municipio seja encontrado e o dado seja atualizado no banco de dados</response>
         [HttpPatch("{id}")]
         public IActionResult PatchMunicipio(int id, JsonPatchDocument<UpdateMunicipioDto> patch )
         {
@@ -95,6 +125,12 @@ namespace IluminaRJApi.Controllers
 
         }
 
+        /// <summary>
+        /// Remove o municipio no banco de dados se este constar no mesmo
+        /// </summary>
+        /// <returns>IEnumerable</returns>
+        /// <response code="404">Caso o município com o id informado não exista no banco de dados</response>
+        /// <response code="204" >Caso o municipio seja encontrado e removido do banco de dados</response>
         [HttpDelete("{id}")]
         public IActionResult DeleteMunicipio(int id)
         {
