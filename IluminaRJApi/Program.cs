@@ -1,3 +1,4 @@
+using IluminaRJApi.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("IluminaRjApiConnection");
 
 // Add services to the container.
-builder.Services.AddDbContext<DbContext>(opts =>
+builder.Services.AddDbContext<DataContext>(opts =>
     opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 builder.Services.AddAutoMapper(AppDomain
