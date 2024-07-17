@@ -51,5 +51,22 @@ namespace IluminaRJApi.Controllers
             var municipioDto = _mapper.Map<ReadMunicipioDto>(municipio);
             return Ok(municipioDto);
         }
+
+        [HttpPut("{id}")]
+        public IActionResult PutMunicipio(int id, UpdateMunicipioDto municipioDto)
+        {
+            var municipio = _context.Municipios
+                .FirstOrDefault(m => m.Id == id);
+
+            if (municipio == null)
+                return NotFound();
+
+            _mapper.Map(municipioDto, municipio);
+
+            _context.SaveChanges();
+            
+            return NoContent();
+
+        }
     }
 }
