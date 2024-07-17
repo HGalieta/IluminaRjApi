@@ -1,4 +1,4 @@
-using AutoMapper;
+﻿using AutoMapper;
 using IluminaRJApi.Data;
 using IluminaRJApi.Data.Dtos;
 using IluminaRJApi.Models;
@@ -93,6 +93,20 @@ namespace IluminaRJApi.Controllers
 
             return NoContent();
 
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteMunicipio(int id)
+        {
+            var municipio = _context.Municipios
+                .FirstOrDefault(m => m.Id == id);
+
+            if (municipio == null)
+                return NotFound();
+
+            _context.Remove(municipio);
+            _context.SaveChanges();
+            return NoContent();
         }
     }
 }
