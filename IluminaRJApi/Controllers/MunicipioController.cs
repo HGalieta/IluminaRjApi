@@ -34,9 +34,9 @@ namespace IluminaRJApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetMunicipios()
+        public IEnumerable<ReadMunicipioDto> GetMunicipios()
         {
-            throw new NotImplementedException();
+            return _mapper.Map<List<ReadMunicipioDto>>(_context.Municipios);
         }
 
         [HttpGet("{id}")]

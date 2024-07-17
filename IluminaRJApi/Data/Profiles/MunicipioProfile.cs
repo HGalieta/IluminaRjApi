@@ -9,6 +9,7 @@ namespace IluminaRJApi.Data.Profiles
         public MunicipioProfile()
         {
             CreateMap<CreateMunicipioDto, Municipio>();
+            CreateMap<Municipio, ReadMunicipioDto>();
         }
     }
 }
