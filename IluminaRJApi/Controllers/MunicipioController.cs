@@ -42,7 +42,14 @@ namespace IluminaRJApi.Controllers
         [HttpGet("{id}")]
         public IActionResult GetMunicipioById(int id)
         {
-            throw new NotImplementedException();
+            var municipio = _context.Municipios
+                .FirstOrDefault(m => m.Id == id);
+
+            if (municipio == null) 
+                return NotFound();
+
+            var municipioDto = _mapper.Map<ReadMunicipioDto>(municipio);
+            return Ok(municipioDto);
         }
     }
 }
