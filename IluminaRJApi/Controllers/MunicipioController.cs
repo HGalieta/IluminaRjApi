@@ -44,7 +44,7 @@ namespace IluminaRJApi.Controllers
         /// Retorna todos os municípios cadastrados no banco de dados
         /// </summary>
         /// <returns>IEnumerable</returns>
-        /// <response code="200" >Com a listagem de todos os municipios inseridos no banco de dados</response>
+        /// <response code="200" >Retornando a listagem de todos os municipios inseridos no banco de dados</response>
         [HttpGet]
         public IEnumerable<ReadMunicipioDto> GetMunicipios()
         {
@@ -56,7 +56,7 @@ namespace IluminaRJApi.Controllers
         /// </summary>
         /// <returns>IEnumerable</returns>
         /// <response code="404">Caso o município com o id informado não exista no banco de dados</response>
-        /// <response code="200" >Com o municipio que possui id correspondente no banco de dados</response>
+        /// <response code="200" >Retornando o municipio que possui id correspondente no banco de dados</response>
         [HttpGet("{id}")]
         public IActionResult GetMunicipioById(int id)
         {
@@ -86,9 +86,7 @@ namespace IluminaRJApi.Controllers
                 return NotFound();
 
             _mapper.Map(municipioDto, municipio);
-
             _context.SaveChanges();
-            
             return NoContent();
 
         }
