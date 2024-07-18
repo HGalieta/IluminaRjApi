@@ -9,5 +9,6 @@ namespace IluminaRJApi.Data
             : base(opts) { }
 
         public DbSet<Municipio> Municipios { get; set; }
+        public DbSet<Empresa> Empresas { get; set; }
     }
 }

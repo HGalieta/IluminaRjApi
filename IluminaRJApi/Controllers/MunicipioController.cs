@@ -21,7 +21,7 @@ namespace IluminaRJApi.Controllers
         }
 
         /// <summary>
-        /// Insere um município ao banco de dados
+        /// Insere um município no banco de dados
         /// </summary>
         /// <param name="municipioDto">Objeto com os campos necessários para a criação de um município</param>
         /// <returns>IActionResult</returns>
@@ -54,6 +54,7 @@ namespace IluminaRJApi.Controllers
         /// <summary>
         /// Retorna o município se este constar no banco de dados
         /// </summary>
+        /// <param name="id">Número inteiro necessário para buscar o município no banco de dados</param>
         /// <returns>IEnumerable</returns>
         /// <response code="404">Caso o município com o id informado não exista no banco de dados</response>
         /// <response code="200" >Retornando o municipio que possui id correspondente no banco de dados</response>
@@ -73,6 +74,8 @@ namespace IluminaRJApi.Controllers
         /// <summary>
         /// Atualiza todos os dados do municipio se este constar no banco de dados
         /// </summary>
+        /// <param name="id">Número inteiro necessário para buscar o município no banco de dados</param>
+        /// <param name="municipioDto">Objeto com os campos necessários para a atualização de todas as propriedades de um município</param>
         /// <returns>IEnumerable</returns>
         /// <response code="404">Caso o município com o id informado não exista no banco de dados</response>
         /// <response code="204" >Caso o municipio seja encontrado e os dados sejam atualizados no banco de dados</response>
@@ -94,6 +97,8 @@ namespace IluminaRJApi.Controllers
         /// <summary>
         /// Atualiza o dado informado do municipio se este constar no banco de dados
         /// </summary>
+        /// <param name="id">Número inteiro necessário para buscar o município no banco de dados</param>
+        /// <param name="patch">Documento informando os dados para a atualização de uma ou mais propriedades de um município</param>
         /// <returns>IEnumerable</returns>
         /// <response code="404">Caso o município com o id informado não exista no banco de dados</response>
         /// <response code="204" >Caso o municipio seja encontrado e o dado seja atualizado no banco de dados</response>
@@ -123,8 +128,9 @@ namespace IluminaRJApi.Controllers
         }
 
         /// <summary>
-        /// Remove o municipio no banco de dados se este constar no mesmo
+        /// Remove o municipio do banco de dados se este constar no mesmo
         /// </summary>
+        /// <param name="id">Número inteiro necessário para buscar o município no banco de dados</param>
         /// <returns>IEnumerable</returns>
         /// <response code="404">Caso o município com o id informado não exista no banco de dados</response>
         /// <response code="204" >Caso o municipio seja encontrado e removido do banco de dados</response>
