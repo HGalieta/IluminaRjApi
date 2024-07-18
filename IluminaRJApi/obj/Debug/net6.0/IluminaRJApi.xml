@@ -4,9 +4,62 @@
         <name>IluminaRJApi</name>
     </assembly>
     <members>
+        <member name="M:IluminaRJApi.Controllers.EmpresaController.PostEmpresa(IluminaRJApi.Data.Dtos.CreateEmpresaDto)">
+            <summary>
+            Insere uma empresa no banco de dados
+            </summary>
+            <param name="empresaDto">Objeto com os campos necessários para a criação de uma empresa</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso a inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:IluminaRJApi.Controllers.EmpresaController.GetEmpresas">
+            <summary>
+            Retorna todas as empresas cadastradas no banco de dados
+            </summary>
+            <returns>IEnumerable</returns>
+            <response code="200" >Retornando a listagem de todas as empresas inseridas no banco de dados</response>
+        </member>
+        <member name="M:IluminaRJApi.Controllers.EmpresaController.GetEmpresaById(System.Int32)">
+            <summary>
+            Retorna a empresa se esta constar no banco de dados
+            </summary>
+            <param name="id">Número inteiro necessário para buscar a empresa no banco de dados</param>
+            <returns>IEnumerable</returns>
+            <response code="404">Caso a empresa com o id informado não exista no banco de dados</response>
+            <response code="200" >Retornando a empresa que possui id correspondente no banco de dados</response>
+        </member>
+        <member name="M:IluminaRJApi.Controllers.EmpresaController.PutEmpresa(System.Int32,IluminaRJApi.Data.Dtos.UpdateEmpresaDto)">
+            <summary>
+            Atualiza todos os dados da empresa se este constar no banco de dados
+            </summary>
+            <param name="id">Número inteiro necessário para buscar a empresa no banco de dados</param>
+            <param name="empresaDto">Objeto com os campos necessários para a atualização de todas as propriedades de uma empresa</param>
+            <returns>IEnumerable</returns>
+            <response code="404">Caso a empresa com o id informado não exista no banco de dados</response>
+            <response code="204" >Caso a empresa seja encontrada e os dados sejam atualizados no banco de dados</response>
+        </member>
+        <member name="M:IluminaRJApi.Controllers.EmpresaController.PatchEmpresa(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{IluminaRJApi.Data.Dtos.UpdateEmpresaDto})">
+            <summary>
+            Atualiza o dado informado da empresa se esta constar no banco de dados
+            </summary>
+            <param name="id">Número inteiro necessário para buscar a empresa no banco de dados</param>
+            <param name="patch">Documento informando os dados para a atualização de uma ou mais propriedades de uma empresa</param>
+            <returns>IEnumerable</returns>
+            <response code="404">Caso a empresa com o id informado não exista no banco de dados</response>
+            <response code="204" >Caso a empresa seja encontrada e o dado seja atualizado no banco de dados</response>
+        </member>
+        <member name="M:IluminaRJApi.Controllers.EmpresaController.DeleteEmpresa(System.Int32)">
+            <summary>
+            Remove a empresa do banco de dados se esta constar no mesmo
+            </summary>
+            <param name="id">Número inteiro necessário para buscar a empresa no banco de dados</param>
+            <returns>IEnumerable</returns>
+            <response code="404">Caso a empresa com o id informado não exista no banco de dados</response>
+            <response code="204" >Caso a empresa seja encontrada e removida do banco de dados</response>
+        </member>
         <member name="M:IluminaRJApi.Controllers.MunicipioController.PostMunicipio(IluminaRJApi.Data.Dtos.CreateMunicipioDto)">
             <summary>
-            Insere um município ao banco de dados
+            Insere um município no banco de dados
             </summary>
             <param name="municipioDto">Objeto com os campos necessários para a criação de um município</param>
             <returns>IActionResult</returns>
@@ -23,6 +76,7 @@
             <summary>
             Retorna o município se este constar no banco de dados
             </summary>
+            <param name="id">Número inteiro necessário para buscar o município no banco de dados</param>
             <returns>IEnumerable</returns>
             <response code="404">Caso o município com o id informado não exista no banco de dados</response>
             <response code="200" >Retornando o municipio que possui id correspondente no banco de dados</response>
@@ -31,6 +85,8 @@
             <summary>
             Atualiza todos os dados do municipio se este constar no banco de dados
             </summary>
+            <param name="id">Número inteiro necessário para buscar o município no banco de dados</param>
+            <param name="municipioDto">Objeto com os campos necessários para a atualização de todas as propriedades de um município</param>
             <returns>IEnumerable</returns>
             <response code="404">Caso o município com o id informado não exista no banco de dados</response>
             <response code="204" >Caso o municipio seja encontrado e os dados sejam atualizados no banco de dados</response>
@@ -39,14 +95,17 @@
             <summary>
             Atualiza o dado informado do municipio se este constar no banco de dados
             </summary>
+            <param name="id">Número inteiro necessário para buscar o município no banco de dados</param>
+            <param name="patch">Documento informando os dados para a atualização de uma ou mais propriedades de um município</param>
             <returns>IEnumerable</returns>
             <response code="404">Caso o município com o id informado não exista no banco de dados</response>
             <response code="204" >Caso o municipio seja encontrado e o dado seja atualizado no banco de dados</response>
         </member>
         <member name="M:IluminaRJApi.Controllers.MunicipioController.DeleteMunicipio(System.Int32)">
             <summary>
-            Remove o municipio no banco de dados se este constar no mesmo
+            Remove o municipio do banco de dados se este constar no mesmo
             </summary>
+            <param name="id">Número inteiro necessário para buscar o município no banco de dados</param>
             <returns>IEnumerable</returns>
             <response code="404">Caso o município com o id informado não exista no banco de dados</response>
             <response code="204" >Caso o municipio seja encontrado e removido do banco de dados</response>
