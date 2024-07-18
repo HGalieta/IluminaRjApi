@@ -2,6 +2,7 @@
 using IluminaRJApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IluminaRJApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240718141116_CreateFundos")]
+    partial class CreateFundos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,10 +58,6 @@ namespace IluminaRJApi.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CNPJ")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Contato")
                         .IsRequired()
                         .HasColumnType("longtext");
 

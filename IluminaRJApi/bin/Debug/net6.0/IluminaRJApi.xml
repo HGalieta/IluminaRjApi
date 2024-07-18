@@ -57,6 +57,59 @@
             <response code="404">Caso a empresa com o id informado não exista no banco de dados</response>
             <response code="204" >Caso a empresa seja encontrada e removida do banco de dados</response>
         </member>
+        <member name="M:IluminaRJApi.Controllers.FundoController.PostFundo(IluminaRJApi.Data.Dtos.CreateFundoDto)">
+            <summary>
+            Insere umm fundo no banco de dados
+            </summary>
+            <param name="fundoDto">Objeto com os campos necessários para a criação de um fundo</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso a inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:IluminaRJApi.Controllers.FundoController.GetFundo">
+            <summary>
+            Retorna todos os fundos cadastrados no banco de dados
+            </summary>
+            <returns>IEnumerable</returns>
+            <response code="200" >Retornando a listagem de todos os fundos inseridos no banco de dados</response>
+        </member>
+        <member name="M:IluminaRJApi.Controllers.FundoController.GetFundoById(System.Int32)">
+            <summary>
+            Retorna o fundo se este constar no banco de dados
+            </summary>
+            <param name="id">Número inteiro necessário para buscar o fundo no banco de dados</param>
+            <returns>IEnumerable</returns>
+            <response code="404">Caso o fundo com o id informado não exista no banco de dados</response>
+            <response code="200" >Retornandoo fundo que possui id correspondente no banco de dados</response>
+        </member>
+        <member name="M:IluminaRJApi.Controllers.FundoController.PutFundo(System.Int32,IluminaRJApi.Data.Dtos.UpdateFundoDto)">
+            <summary>
+            Atualiza todos os dados do fundo se este constar no banco de dados
+            </summary>
+            <param name="id">Número inteiro necessário para buscar o fundo no banco de dados</param>
+            <param name="empresaDto">Objeto com os campos necessários para a atualização de todas as propriedades de um fundo</param>
+            <returns>IEnumerable</returns>
+            <response code="404">Caso o fundo com o id informado não exista no banco de dados</response>
+            <response code="204" >Caso o fundo seja encontrado e os dados sejam atualizados no banco de dados</response>
+        </member>
+        <member name="M:IluminaRJApi.Controllers.FundoController.PatchFundo(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{IluminaRJApi.Data.Dtos.UpdateFundoDto})">
+            <summary>
+            Atualiza o dado informado do fundo se este constar no banco de dados
+            </summary>
+            <param name="id">Número inteiro necessário para buscar o fundo no banco de dados</param>
+            <param name="patch">Documento informando os dados para a atualização de uma ou mais propriedades de um fundo</param>
+            <returns>IEnumerable</returns>
+            <response code="404">Caso o fundo com o id informado não exista no banco de dados</response>
+            <response code="204" >Caso o fundo seja encontrado e o dado seja atualizado no banco de dados</response>
+        </member>
+        <member name="M:IluminaRJApi.Controllers.FundoController.DeleteFundo(System.Int32)">
+            <summary>
+            Remove o fundo do banco de dados se esta constar no mesmo
+            </summary>
+            <param name="id">Número inteiro necessário para buscar o fundo no banco de dados</param>
+            <returns>IEnumerable</returns>
+            <response code="404">Caso o fundo com o id informado não exista no banco de dados</response>
+            <response code="204" >Caso o fundo seja encontrado e removida do banco de dados</response>
+        </member>
         <member name="M:IluminaRJApi.Controllers.MunicipioController.PostMunicipio(IluminaRJApi.Data.Dtos.CreateMunicipioDto)">
             <summary>
             Insere um município no banco de dados

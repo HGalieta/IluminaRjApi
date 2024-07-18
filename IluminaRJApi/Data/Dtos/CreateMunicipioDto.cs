@@ -4,7 +4,6 @@ namespace IluminaRJApi.Data.Dtos
 {
     public class CreateMunicipioDto
     {
-        public int Id { get; set; }
         [Required(ErrorMessage = "O nome do município deve ser informado.")]
         public string Nome { get; set; }
         [Required(ErrorMessage = "O total de pontos de luz do município deve ser informado.")]

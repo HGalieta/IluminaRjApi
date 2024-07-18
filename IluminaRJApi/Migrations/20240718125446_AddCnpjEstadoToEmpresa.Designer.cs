@@ -2,6 +2,7 @@
 using IluminaRJApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IluminaRJApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240718125446_AddCnpjEstadoToEmpresa")]
+    partial class AddCnpjEstadoToEmpresa
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,29 +49,6 @@ namespace IluminaRJApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Empresas");
-                });
-
-            modelBuilder.Entity("IluminaRJApi.Models.Fundo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("CNPJ")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Contato")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Fundos");
                 });
 
             modelBuilder.Entity("IluminaRJApi.Models.Municipio", b =>

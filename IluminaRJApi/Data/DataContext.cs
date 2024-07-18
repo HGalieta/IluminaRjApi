@@ -10,5 +10,6 @@ namespace IluminaRJApi.Data
 
         public DbSet<Municipio> Municipios { get; set; }
         public DbSet<Empresa> Empresas { get; set; }
+        public DbSet<Fundo> Fundos { get; set; }
     }
 }
