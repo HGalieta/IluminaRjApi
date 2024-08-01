@@ -14,5 +14,7 @@ namespace IluminaRJApi.Data.Dtos
         public Boolean ArrecadaCip { get; set; }
         [Required(ErrorMessage = "O gasto total, em R$, do município com iluminação pública deve ser informado.")]
         public float GastoIp { get; set; }
+        [Required(ErrorMessage = "O status do chamamento público do município deve ser informado se aberto(1) ou fechado(0)")]
+        public Boolean ChamamentoAberto { get; set; }
     }
 }

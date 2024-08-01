@@ -86,7 +86,7 @@
             Atualiza todos os dados do fundo se este constar no banco de dados
             </summary>
             <param name="id">Número inteiro necessário para buscar o fundo no banco de dados</param>
-            <param name="empresaDto">Objeto com os campos necessários para a atualização de todas as propriedades de um fundo</param>
+            <param name="fundoDto">Objeto com os campos necessários para a atualização de todas as propriedades de um fundo</param>
             <returns>IEnumerable</returns>
             <response code="404">Caso o fundo com o id informado não exista no banco de dados</response>
             <response code="204" >Caso o fundo seja encontrado e os dados sejam atualizados no banco de dados</response>

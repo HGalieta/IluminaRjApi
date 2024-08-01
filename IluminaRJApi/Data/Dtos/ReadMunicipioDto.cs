@@ -8,6 +8,7 @@
         public int PontosLed { get; set; }
         public Boolean ArrecadaCip { get; set; }
         public float GastoIp { get; set; }
+        public Boolean ChamamentoAberto { get; set; }
         public DateTime HoraDaConsulta { get; } = DateTime.Now;
     }
 }
